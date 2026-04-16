@@ -32,7 +32,7 @@ const playlist = {
     const songId = request.params.songid;
     logger.debug('Deleting Song ${songID} from Playlist ${plalistId}');
     playlistStore.removeSong(playlistId, songId);
-    response.redirect('/playlist' + playlistId);
+    response.redirect('/playlist/' + playlistId);
   },
   updateSong(request, response) {
     const playlistId = request.params.id;
