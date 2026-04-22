@@ -1,43 +1,46 @@
 {
   "playlistCollection": [
     {
-      "id": "01",
-      "title": "Beethoven Sonatas",
+      "id": "101fe68a-2f92-4abe-997c-605845cb46eb",
+      "title": "Homer’s new playlist",
       "rating": 5,
-      "songs": [
-        {
-          "id": "04",
-          "title": "Piano Sonata No. 3",
-          "artist": "Beethoven"
-        },
-        {
-          "id": "05",
-          "title": "Piano Sonata No. 7",
-          "artist": "Beethoven"
-        },
-        {
-          "id": "06",
-          "title": "Piano Sonata No. 10",
-          "artist": "Beethoven"
-        }
-      ]
+      "date": "2026-04-21T11:33:47.758Z",
+      "songs": []
     },
     {
-      "id": "02",
-      "title": "Beethoven Concertos",
-      "rating": 2,
+      "userid": "b0be6dfd-d09c-41d3-af01-d8531d4df0fb",
+      "id": "5c55b082-729a-4b31-b678-b68e9c3b2c68",
+      "title": "1",
+      "rating": 1,
+      "songs": [],
+      "date": "2026-04-22T15:37:18.307Z"
+    },
+    {
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "id": "e51e01cf-08bc-436f-acfe-4efdc68a5ad8",
+      "title": "A",
+      "rating": 4,
       "songs": [
         {
-          "id": "07",
-          "title": "Piano Concerto No. 0",
-          "artist": "Beethoven"
+          "id": "885f7b58-b2bd-4634-92a4-25a9f7200813",
+          "title": "q",
+          "artist": "q"
         },
         {
-          "id": "08",
-          "title": "Piano Concerto No. 4",
-          "artist": "Beethoven"
+          "id": "30a7d7ed-4310-4dfb-aa6e-1ec65648e72b",
+          "title": "q",
+          "artist": "eqwe"
         }
-      ]
+      ],
+      "date": "2026-04-22T15:41:29.936Z"
+    },
+    {
+      "userid": "505a3218-f7ed-43ca-8b75-dfabbf473021",
+      "id": "ea7b9299-40bf-4b48-83aa-d6ffcffd03fe",
+      "title": "123",
+      "rating": 4,
+      "songs": [],
+      "date": "2026-04-22T16:20:29.038Z"
     }
   ]
 }

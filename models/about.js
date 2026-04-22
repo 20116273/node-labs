@@ -10,6 +10,7 @@ const about = {
   getAppInfo() {
     return this.about.findAll(this.collection);
   }
+  
 };
 
 export default about;
