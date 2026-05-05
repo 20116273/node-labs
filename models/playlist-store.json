@@ -41,6 +41,24 @@
       "rating": 4,
       "songs": [],
       "date": "2026-04-22T16:20:29.038Z"
+    },
+    {
+      "id": "0d14b9a7-e4f5-4da7-8d45-e7e7ef259cb6",
+      "userid": "45d77625-0360-4977-8e23-71f01d8a4a35",
+      "title": "test",
+      "rating": 2,
+      "songs": [
+        {
+          "id": "8a2806f4-9ed3-4ae4-a5d5-bce7b2647a07",
+          "title": "Titanic",
+          "artist": "Iceberg"
+        }
+      ],
+      "date": "2026-05-05T20:10:32.559Z",
+      "picture": {
+        "url": "http://res.cloudinary.com/dr8xxq7pb/image/upload/v1778011834/qtbdrbuxo6emhathimg5.png",
+        "public_id": "qtbdrbuxo6emhathimg5"
+      }
     }
   ]
 }

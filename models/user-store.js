@@ -1,5 +1,6 @@
 'use strict';
 
+import { response } from 'express';
 import logger from '../utils/logger.js';
 import JsonStore from './json-store.js';
 
@@ -11,17 +12,24 @@ const userStore = {
   getAllUsers() {
     return this.store.findAll(this.collection);
   },
-  
+
   getUserById(id) {
     return this.store.findOneBy(this.collection, (user => user.id === id));
   },
-  
+
   getUserByEmail(email) {
     return this.store.findOneBy(this.collection, (user => user.email === email));
   },
-  
-  addUser(user) {
-    this.store.addCollection(this.collection, user);
+
+  async addUser(user, picture, response) {
+    try {
+      user.picture = await this.store.addToCloudinary(picture);
+      this.store.addCollection(this.collection, user);
+      response();
+    } catch (error) {
+      logger.error("Error processing user: ", error);
+      response(error);
+    }
   },
 
 };

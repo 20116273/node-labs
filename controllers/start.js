@@ -3,6 +3,9 @@
 import logger from "../utils/logger.js";
 import appStore from "../models/app-store.js";
 import accounts from "./accounts.js";
+import fileUpload from "express-fileupload";
+import { Logger } from "winston";
+
 
 const start = {
   createView(request, response) {
@@ -14,6 +17,7 @@ const start = {
         title: "Welcome to the Playlist app!",
         info: appStore.getAppInfo(),
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+        picture: loggedInUser.picture
       };
       response.render('start', viewData);
     }

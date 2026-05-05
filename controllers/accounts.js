@@ -14,7 +14,7 @@ const accounts = {
     };
     response.render('index', viewData);
   },
-  
+
   //login function to render login page
   login(request, response) {
     const viewData = {
@@ -22,31 +22,33 @@ const accounts = {
     };
     response.render('login', viewData);
   },
-  
+
   //logout function to render logout page
   logout(request, response) {
     response.cookie('playlist', '');
     response.redirect('/');
   },
-  
- //signup function to render signup page
+
+  //signup function to render signup page
   signup(request, response) {
     const viewData = {
       title: 'Login to the Service',
     };
     response.render('signup', viewData);
   },
-  
- //register function to render the registration page for adding a new user
+
+  //register function to render the registration page for adding a new user
   register(request, response) {
     const user = request.body;
     user.id = uuidv4();
-    userStore.addUser(user);
-    logger.info('registering' + user.email);
-    response.cookie('playlist', user.email);
-    response.redirect('/start');
+
+    userStore.addUser(user, request.files.picture, function () {
+      logger.info('registering ' + user.email);
+      response.cookie('playlist', user.email);
+      response.redirect('/start');
+    });
   },
-  
+
   //authenticate function to check user credentials and either render the login page again or the start page.
   authenticate(request, response) {
     const user = userStore.getUserByEmail(request.body.email);
@@ -58,9 +60,9 @@ const accounts = {
       response.redirect('/login');
     }
   },
-  
- //utility function getCurrentUser to check who is currently logged in
-  getCurrentUser (request) {
+
+  //utility function getCurrentUser to check who is currently logged in
+  getCurrentUser(request) {
     const userEmail = request.cookies.playlist;
     return userStore.getUserByEmail(userEmail);
   }

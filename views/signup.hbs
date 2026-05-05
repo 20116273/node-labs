@@ -1,15 +1,16 @@
 {{> welcomemenu id="signup"}}
 
-<form class="ui stacked segment form" action="/register" method="POST">
+<form class="ui stacked segment form" action="/register" enctype="multipart/form-data" method="POST">
   <h3 class="ui header">Register</h3>
+  
   <div class="two fields">
     <div class="field">
       <label for="firstName">First Name</label>
-      <input placeholder="First Name" type="text"  name="firstName" autofocus required>
+      <input placeholder="First Name" type="text" name="firstName" autofocus required>
     </div>
     <div class="field">
       <label for="lastName">Last Name</label>
-      <input placeholder="Last Name" type="text"  name="lastName" required>
+      <input placeholder="Last Name" type="text" name="lastName" required>
     </div>
   </div>
   <div class="field">
@@ -20,5 +21,11 @@
     <label for="password">Password</label>
     <input type="password" name="password" required>
   </div>
+
+  <div class="field">
+    <label>Profile Image</label>
+    <input placeholder="Image" type="file" name="picture" required>
+  </div>
+
   <button class="ui blue submit button">Submit</button>
 </form>
